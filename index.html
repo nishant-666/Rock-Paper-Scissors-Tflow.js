@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors with TensorFlow.js</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    <script src="dist/bundle.js"></script>
+</head>
+<style>
+    video {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    </style>
+<body>
+    <div class="ui raised very padded text container segment" style="margin-bottom: 20px;">
+    <div>
+        <div class="container">
+            <div class="row" style="text-align: center;">
+                <h2 class="ui header">Play Rock Paper Scissors with your browser!
+                    <div class="sub header">Hold down the buttons to teach your machine learn your gestures.</div>
+            </div>
+            <div class="row">
+                <div class="column clearfix">
+                    <div class="float-right">
+                        <video id="cam-video" width="100px" height="240" autoplay=""></video>
+                    </div>
+                </div>
+                <div class="column" style="padding-top: 30px">
+                    <div style="text-align: center;">
+                        <button id="train-rock-button" class="ui blue button"><i class="hand rock icon"></i>Train Rock</button>
+                        <span id="train-rock-span">No examples added</span>
+                    </div>
+                    <div style="margin-top: 20px;text-align: center;">
+                        <button id="train-paper-button" class="ui black button"><i class="hand paper icon"></i>Train Paper</button>
+                        <span id="train-paper-span">No examples added</span>
+                    </div>
+                    <div style="margin-top: 20px;text-align: center;">
+                        <button id="train-scissors-button" class="ui green button"><i class="hand scissors icon"></i>Train Scissors</button>
+                        <span id="train-scissors-span">No examples added</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="display: flex; justify-content: center; padding-top: 15px;">
+                <button class="ui red button" id="start-game-button" disabled>Start the game</button>
+            </div>
+            <div class="row" style="display: flex; justify-content: center;">
+                <span id="game-status" style="margin-top: 20px;">Train your gestures above then start a game!</span>
+            </div>
+            <div>
+                <div style="text-align: center;">
+                    <img id="rock-you" src="images/rock.png" class="flip float-right" hidden>
+                    <img id="paper-you" src="images/paper.png" class="float-right" hidden>
+                    <img id="scissors-you" src="images/scissors.png" class="float-right" hidden>
+                    <img id="you" class="float-right" hidden>
+               
+                    <img id="rock-cpu" src="images/rock.png" hidden>
+                    <img id="paper-cpu" src="images/paper.png" class="flip" hidden>
+                    <img id="scissors-cpu" src="images/scissors.png" class="flip" hidden>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
